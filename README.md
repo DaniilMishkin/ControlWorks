@@ -1,2 +1,0 @@
-# MMF1course
-Homework
