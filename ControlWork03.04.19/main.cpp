@@ -15,6 +15,7 @@ const int stringSize = 256;
 typedef char*(*Rule)(char*);
 
 char* inputString();
+int inputLenth();
 char* code(char*);
 void task(char*, int, Rule);
 void stringReplace(char* , char* , char* );
@@ -23,9 +24,7 @@ int substringPosition(char*, char*, int);
 int main(int argc, const char * argv[]) {
     char* string = inputString();
     
-    int n;
-    cout << "Input lenth of word: ";
-    cin >> n;
+    int n = inputLenth();
     
     task(string, n, code);
     
@@ -44,6 +43,13 @@ char* inputString() {
     return string;
 }
 
+int inputLenth() {
+    int n;
+    cout << "Input lenth of word: ";
+    cin >> n;
+    
+    return n;
+}
 
 char* code(char* word) {
     char* codedWord = new char[stringSize];
